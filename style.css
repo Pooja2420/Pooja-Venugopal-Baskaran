@@ -11,23 +11,25 @@ body {
     background-color: #87CEEB; /* Sky blue background */
     color: #333;
     overflow: hidden;
+    height: 100vh;
   }
   
   /* Moving Clouds Background */
   .clouds {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 200%;
+    width: 300%;
     height: 100%;
     background: url('https://i.imgur.com/hfKiizT.png') repeat-x;
     animation: moveClouds 60s linear infinite;
-    opacity: 0.5;
+    opacity: 0.6;
+    z-index: 0;
   }
   
   @keyframes moveClouds {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    to { transform: translateX(-100%); }
   }
   
   .container {
